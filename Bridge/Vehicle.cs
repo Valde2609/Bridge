@@ -10,22 +10,24 @@ public abstract class Vehicle
 {
 
 	/// <summary>
-	/// License plate of the vehicle And Date of the vehicle
+	/// License plate of the vehicle And Date of the vehicle, and a brobizz boolean
 	/// </summary>
 	public string LicensePlate { get; set; }
 	public DateTime Date { get; set; }
+	public bool BroBizz { get; set; }
 
 	/// <summary>
-	/// Conmstructor that takes in the license plate of the vehicle and restricts it to 7 characters
+	/// Conmstructor that initialises the license plate of the vehicle and restricts it to 7 characters, and brobizz boolean
 	/// </summary>
 	/// <param name="licensePlate"></param>
 	/// <exception cref="ArgumentException"></exception>
-	public Vehicle(string licensePlate)
+	public Vehicle(string licensePlate, bool broBizz)
 	{
 		if (licensePlate.Length > 7)
 			throw new ArgumentException("License plate cannot exceed 7 characters.");
 
 		LicensePlate = licensePlate;
+		BroBizz = broBizz;
 	}
 
 	/// <summary>

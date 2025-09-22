@@ -9,13 +9,14 @@ namespace Bridge;
 public class MC : Vehicle
 {
 	/// <summary>
-	/// Constructor that initialises the license plate of the MC
+	/// Constructor that initialises the license plate, date and brobizz of the MC
 	/// </summary>
 	/// <param name="licensePlate"></param>
-	public MC(string licensePlate) : base(licensePlate)
+	public MC(string licensePlate, bool broBizz) : base(licensePlate, broBizz)
 	{
 		LicensePlate = licensePlate;
 		Date = DateTime.Now;
+		BroBizz = broBizz;
 	}
 
 	/// <summary>
@@ -24,7 +25,10 @@ public class MC : Vehicle
 	/// <returns></returns>
 	public override double Price()
 	{
-		return 120;
+		if (BroBizz == true)
+			return 108;
+		else
+			return 120;
 	}
 
 	/// <summary>
