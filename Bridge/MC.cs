@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 
 namespace Bridge;
 
-public class MC
+public class MC : Vehicle
 {
-	/// <summary>
-	/// License plate of the MC And Date of the MC
-	/// </summary>
-	public string LicensePlate { get; set; }
-	public DateTime Date { get; set; }
 
 	/// <summary>
 	/// Method that fetches the price of the MC
 	/// </summary>
 	/// <returns></returns>
-	public double Price()
+	public override double Price()
 	{
 		return 120;
 	}
+
 	/// <summary>
 	/// Method that fetches the type of vehicle
 	/// </summary>
@@ -30,5 +26,6 @@ public class MC
 	{
 		return "MC";
 	}
+
 
 }

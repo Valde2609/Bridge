@@ -1,18 +1,13 @@
 ﻿namespace Bridge;
 
-public class Car
+public class Car : Vehicle
 {
-	/// <summary>
-	/// License plate of the car And Date of the car
-	/// </summary>
-	public string LicensePlate { get; set; }
-	public DateTime Date { get; set; }
 
 	/// <summary>
 	/// Method that fetches the price of the car
 	/// </summary>
 	/// <returns></returns>
-	public double Price()
+	public override double Price()
 	{
 		return 230;
 	}
@@ -20,7 +15,7 @@ public class Car
 	/// Method that fetches the type of vehicle
 	/// </summary>
 	/// <returns></returns>
-	public string VehicleType()
+	public override string VehicleType()
 	{
 		return "Car";
 	}
