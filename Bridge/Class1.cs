@@ -1,7 +1,6 @@
-﻿namespace Bridge
-{
-    public class Class1
-    {
+﻿namespace Bridge;
 
-    }
+public class Class1
+{
+
 }
