@@ -8,6 +8,15 @@ namespace Bridge;
 
 public class MC : Vehicle
 {
+	/// <summary>
+	/// Constructor that initialises the license plate of the MC
+	/// </summary>
+	/// <param name="licensePlate"></param>
+	public MC(string licensePlate) : base(licensePlate)
+	{
+		LicensePlate = licensePlate;
+		Date = DateTime.Now;
+	}
 
 	/// <summary>
 	/// Method that fetches the price of the MC

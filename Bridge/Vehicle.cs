@@ -14,6 +14,20 @@ public abstract class Vehicle
 	/// </summary>
 	public string LicensePlate { get; set; }
 	public DateTime Date { get; set; }
+
+	/// <summary>
+	/// Conmstructor that takes in the license plate of the vehicle and restricts it to 7 characters
+	/// </summary>
+	/// <param name="licensePlate"></param>
+	/// <exception cref="ArgumentException"></exception>
+	public Vehicle(string licensePlate)
+	{
+		if (licensePlate.Length > 7)
+			throw new ArgumentException("License plate cannot exceed 7 characters.");
+
+		LicensePlate = licensePlate;
+	}
+
 	/// <summary>
 	/// Method that fetches the price of the vehicle
 	/// </summary>

@@ -15,7 +15,7 @@ namespace Bridge.Tests
 		public void PriceTest()
 		{
 			//Arrange
-			MC mc = new MC();
+			MC mc = new MC("13579");
 			//Act
 			double result = mc.Price();
 			//Assert
@@ -25,11 +25,30 @@ namespace Bridge.Tests
 		public void VehicleTest()
 		{
 			//Arrange
-			MC mc = new MC();
+			MC mc = new MC("24680");
 			//Act
 			string result = mc.Vehicle();
 			//Assert
 			Assert.AreEqual("MC", result);
 		}
+		public void LPRestrictionExceededMC()
+		{
+			// Act & Assert
+			Assert.ThrowsException<ArgumentException>(() =>
+			{
+				MC mc = new MC("1234567890");
+			});
+		}
+		[TestMethod()]
+		public void LPRestrictionNotExceededCar()
+		{
+			//Arrange
+			MC mc = new MC("ABC123");
+			//Act
+			string result = mc.LicensePlate;
+			//Assert
+			Assert.AreEqual("ABC123", result);
+		}
+
 	}
 }

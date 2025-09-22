@@ -4,6 +4,16 @@ public class Car : Vehicle
 {
 
 	/// <summary>
+	/// Constructor that initialises the license plate of the car
+	/// </summary>
+	/// <param name="licensePlate"></param>
+	public Car(string licensePlate) : base(licensePlate)
+	{
+		LicensePlate = licensePlate;
+		Date = DateTime.Now;
+	}
+
+	/// <summary>
 	/// Method that fetches the price of the car
 	/// </summary>
 	/// <returns></returns>
