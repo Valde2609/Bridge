@@ -7,10 +7,10 @@ public class Car : Vehicle
 	/// Constructor that initialises the license plate, date and brobizz of the car
 	/// </summary>
 	/// <param name="licensePlate"></param>
-	public Car(string licensePlate, bool broBizz) : base(licensePlate, broBizz)
+	public Car(string licensePlate, bool broBizz, DateTime date) : base(licensePlate, broBizz, date)
 	{
 		LicensePlate = licensePlate;
-		Date = DateTime.Now;
+		Date = date;
 		BroBizz = broBizz;
 	}
 

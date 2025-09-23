@@ -15,7 +15,7 @@ namespace Bridge.Tests
 		public void PriceTest()
 		{
 			//Arrange
-			MC mc = new MC("13579", false);
+			MC mc = new MC("13579", false, new DateTime(2025, 1, 1));
 			//Act
 			double result = mc.Price();
 			//Assert
@@ -25,7 +25,7 @@ namespace Bridge.Tests
 		public void VehicleTest()
 		{
 			//Arrange
-			MC mc = new MC("24680", false);
+			MC mc = new MC("24680", false, new DateTime(2025, 1, 1));
 			//Act
 			string result = mc.Vehicle();
 			//Assert
@@ -37,14 +37,14 @@ namespace Bridge.Tests
 			Assert.ThrowsException<ArgumentException>(() =>
 			{
 				//Arrange
-				MC mc = new MC("1234567890", false);
+				MC mc = new MC("1234567890", false, new DateTime(2025, 1, 1));
 			});
 		}
 		[TestMethod()]
 		public void LPRestrictionNotExceededMC()
 		{
 			//Arrange
-			MC mc = new MC("ABC123", true);
+			MC mc = new MC("ABC123", true, new DateTime(2025, 1, 1));
 			//Act
 			string result = mc.LicensePlate;
 			//Assert
@@ -54,7 +54,7 @@ namespace Bridge.Tests
 		public void BroBizzDiscountMC()
 		{
 			//Arrange
-			MC mc = new MC("ABC123", true);
+			MC mc = new MC("ABC123", true, new DateTime(2025, 1, 1));
 			//Act
 			double result = mc.Price();
 			//Assert

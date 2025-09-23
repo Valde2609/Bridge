@@ -21,13 +21,14 @@ public abstract class Vehicle
 	/// </summary>
 	/// <param name="licensePlate"></param>
 	/// <exception cref="ArgumentException"></exception>
-	public Vehicle(string licensePlate, bool broBizz)
+	public Vehicle(string licensePlate, bool broBizz, DateTime date)
 	{
 		if (licensePlate.Length > 7)
 			throw new ArgumentException("License plate cannot exceed 7 characters.");
 
 		LicensePlate = licensePlate;
 		BroBizz = broBizz;
+		Date = date;
 	}
 
 	/// <summary>

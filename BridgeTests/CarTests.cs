@@ -16,7 +16,7 @@ namespace Bridge.Tests
 		public void PriceTest()
 		{
 			//Arrange
-			Car car = new Car("12345", false);
+			Car car = new Car("12345", false, new DateTime(2025, 1, 1));
 			//Act
 			double result = car.Price();
 			//Assert
@@ -27,7 +27,7 @@ namespace Bridge.Tests
 		public void VehicleTypeTest()
 		{
 			//Arrange
-			Car car = new Car("67890", true);
+			Car car = new Car("67890", true, new DateTime(2025, 1, 1));
 			//Act
 			string result = car.VehicleType();
 			//Assert
@@ -41,14 +41,14 @@ namespace Bridge.Tests
 			Assert.ThrowsException<ArgumentException>(() =>
 			{
 				//Arrange
-				Car car = new Car("1234567890", true);
+				Car car = new Car("1234567890", true, new DateTime(2025, 1, 1));
 			});
 		}
 		[TestMethod()]
 		public void LPRestrictionNotExceededCar()
 		{
 			//Arrange
-			Car car = new Car("ABC123", true);
+			Car car = new Car("ABC123", true, new DateTime(2025, 1, 1));
 			//Act
 			string result = car.LicensePlate;
 			//Assert
@@ -58,7 +58,7 @@ namespace Bridge.Tests
 		public void BroBizzDiscount()
 		{
 			//Arrange
-			Car car = new Car("ABC123", true);
+			Car car = new Car("ABC123", true, new DateTime(2025, 1, 1));
 			//Act
 			double result = car.Price();
 			//Assert
