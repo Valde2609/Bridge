@@ -27,7 +27,7 @@ namespace Bridge.Tests
 			//Arrange
 			MC mc = new MC("24680", false, new DateTime(2025, 1, 1));
 			//Act
-			string result = mc.Vehicle();
+			string result = mc.VehicleType();
 			//Assert
 			Assert.AreEqual("MC", result);
 		}

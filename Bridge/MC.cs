@@ -35,7 +35,7 @@ public class MC : Vehicle
 	/// Method that fetches the type of vehicle
 	/// </summary>
 	/// <returns></returns>
-	public string Vehicle()
+	public override string VehicleType()
 	{
 		return "MC";
 	}

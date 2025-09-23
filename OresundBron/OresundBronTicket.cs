@@ -12,28 +12,27 @@ public class OresundBronTicket
 	/// <exception cref="ArgumentException"></exception>
 	public double OresundPrice(Vehicle vehicle)
 	{
-		double price = 0;
-		if (vehicle is Car)
+		if (vehicle.VehicleType() == "Car" && vehicle.BroBizz == false)
 		{
-			price = 460;
-			if (vehicle.BroBizz)
-			{
-				price = 178;
-			}
+			return vehicle.Price() + 230;
 		}
-		else if (vehicle is MC)
+		else if (vehicle.VehicleType() == "Car" && vehicle.BroBizz == true)
 		{
-			price = 235;
-			if (vehicle.BroBizz)
-			{
-				price = 92; 
-			}
+			return vehicle.Price() - 29;
 		}
+		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == false)   //Fejl fordi den hedder vehicle og ikke VehicleType i mc klassen
+		{
+			return vehicle.Price() + 115;
+		}
+		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == true)    //Fejl fordi den hedder vehicle og ikke VehicleType i mc klassen
+		{
+				return vehicle.Price() - 16; 
+			}
 		else
 		{
 			throw new ArgumentException("vehicle type must be Car or MC.");
 		}
-		return price;
+	
 	}
 	/// <summary>
 	/// Method that fetches the type of vehicle as either "Oresund Car" or "Oresund MC"
