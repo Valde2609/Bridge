@@ -4,7 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +13,9 @@
   <ItemGroup>
     <Reference Include="Bridge">
       <HintPath>Extern DLL\Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreBaeltTicketLibrary">
+      <HintPath>Extern DLL\StoreBaeltTicketLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

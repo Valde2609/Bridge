@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="M:Bridge.Car.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Constructor that initialises the license plate, date and brobizz of the car
+            </summary>
+            <param name="licensePlate"></param>
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            Method that fetches the price of the car
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Method that fetches the type of vehicle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.MC.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Constructor that initialises the license plate, date and brobizz of the MC
+            </summary>
+            <param name="licensePlate"></param>
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            Method that fetches the price of the MC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.MC.Vehicle">
+            <summary>
+            Method that fetches the type of vehicle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Bridge.Vehicle.LicensePlate">
+            <summary>
+            License plate of the vehicle And Date of the vehicle, and a brobizz boolean
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.#ctor(System.String,System.Boolean,System.DateTime)">
+            <summary>
+            Conmstructor that initialises the license plate of the vehicle and restricts it to 7 characters, and brobizz boolean
+            </summary>
+            <param name="licensePlate"></param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Bridge.Vehicle.Price">
+            <summary>
+            Method that fetches the price of the vehicle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            Method that fetches the type of vehicle
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
