@@ -8,21 +8,18 @@ public class StorebaeltTicket
 	/// </summary>
 	/// <param name="car"></param>
 	/// <returns></returns>
-	public double StorebaeltPrice(Car car)
+	public double WeekendPrice(Vehicle vehicle)
 	{
-		if (car.Date.DayOfWeek == DayOfWeek.Saturday || car.Date.DayOfWeek == DayOfWeek.Sunday)
+		bool isWeekend = vehicle.Date.DayOfWeek == DayOfWeek.Saturday || vehicle.Date.DayOfWeek == DayOfWeek.Sunday;
+
+
+		if (vehicle.VehicleType() == "Car" && isWeekend == true)
 		{
-			if (car.BroBizz == true)
-				return 176;
-			else
-				return 195.5;
+			return vehicle.Price() * 0.85;
 		}
 		else
 		{
-			if (car.BroBizz == true)
-				return 207;
-			else
-				return 230;
+			return vehicle.Price();
 		}
 	}
 }
