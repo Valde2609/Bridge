@@ -12,28 +12,32 @@ class StorebæltsbroenRepo
 	/// <summary>
 	/// Static List that holds all the tickets bought for Storebæltsbroen
 	/// </summary>
-	private static List<StorebaeltTicket> _storebæltsbroenTicketList = new List<StorebaeltTicket>();
+	private static List<Vehicle> _storebæltsbroenTicketList = new List<Vehicle>();
 
 	/// <summary>
 	/// Method that buys/adds a ticket to the list of tickets
 	/// </summary>
 	/// <param name="ticket"></param>
-	public void BuyTicket(StorebaeltTicket ticket)
+	public void BuyTicket(Vehicle vehicle)
 	{
-		_storebæltsbroenTicketList.Add(ticket);
+		_storebæltsbroenTicketList.Add(vehicle);
 	}
 	/// <summary>
 	/// Method that fetches all the tickets bought for Storebæltsbroen
 	/// </summary>
 	/// <returns></returns>
-	public List<StorebaeltTicket> GetAllTickets()
+	public List<Vehicle> GetAllTickets()
 	{
 		return _storebæltsbroenTicketList;
 	}
 	//TODO: Implement FindAllTicketsForVehicle
-	public void FindAllTicketsForVehicle(Vehicle vehicle)
+	public List<Vehicle> FindAllTicketsForVehicle(Vehicle v)
 	{
-		
+		return _storebæltsbroenTicketList.FindAll(v => v.LicensePlate == v.LicensePlate);
+		//
+		//(v.LicensePlate).ToList());
+
+
 		//var matchingVehicles = _storebæltsbroenTicketList
 		//	.Where(v => v.LicensePlate == targetPlate)
 		//	.ToList();
