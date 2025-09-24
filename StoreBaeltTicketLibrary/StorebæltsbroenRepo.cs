@@ -18,9 +18,9 @@ class StorebæltsbroenRepo
 	/// Method that buys/adds a ticket to the list of tickets
 	/// </summary>
 	/// <param name="ticket"></param>
-	public void BuyTicket(Vehicle vehicle)
+	public void BuyTicket(Vehicle ticket)
 	{
-		_storebæltsbroenTicketList.Add(vehicle);
+		_storebæltsbroenTicketList.Add(ticket);
 	}
 	/// <summary>
 	/// Method that fetches all the tickets bought for Storebæltsbroen
@@ -30,25 +30,14 @@ class StorebæltsbroenRepo
 	{
 		return _storebæltsbroenTicketList;
 	}
-	//TODO: Implement FindAllTicketsForVehicle
-	public List<Vehicle> FindAllTicketsForVehicle(Vehicle v)
+	/// <summary>
+	/// Method that finds all tickets bought for a specific vehicle based on license plate
+	/// </summary>
+	/// <param name="licensePlate"></param>
+	/// <returns></returns>
+	public List<Vehicle> FindAllTicketsForVehicle(string licensePlate)
 	{
-		return _storebæltsbroenTicketList.FindAll(v => v.LicensePlate == v.LicensePlate);
-		//
-		//(v.LicensePlate).ToList());
-
-
-		//var matchingVehicles = _storebæltsbroenTicketList
-		//	.Where(v => v.LicensePlate == targetPlate)
-		//	.ToList();
-
-		//return matchingVehicles;
-
-
-
-		//foreach (var v in _storebæltsbroenTicketList)
-		//{
-		//	Console.WriteLine($"{vehicle.VehicleType()} with plate {vehicle.LicensePlate}");
-		//}
+		return _storebæltsbroenTicketList.FindAll(ticket => ticket.LicensePlate == licensePlate);
 	}
+
 }

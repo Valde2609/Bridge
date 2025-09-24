@@ -20,11 +20,11 @@ public class OresundBronTicket
 		{
 			return vehicle.Price() - 29;
 		}
-		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == false)   //Fejl fordi den hedder vehicle og ikke VehicleType i mc klassen
+		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == false)
 		{
 			return vehicle.Price() + 115;
 		}
-		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == true)    //Fejl fordi den hedder vehicle og ikke VehicleType i mc klassen
+		else if (vehicle.VehicleType() == "MC" && vehicle.BroBizz == true)
 		{
 				return vehicle.Price() - 16; 
 			}
