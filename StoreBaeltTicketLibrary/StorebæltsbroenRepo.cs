@@ -7,7 +7,7 @@ using Bridge;
 
 namespace StoreBaeltTicketLibrary;
 
-class StorebæltsbroenRepo
+class StorebæltsbroenRepo : IStorebæltsbroenRepo
 {
 	/// <summary>
 	/// Static List that holds all the tickets bought for Storebæltsbroen
